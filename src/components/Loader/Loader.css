@@ -1,0 +1,7 @@
+.loader-wrapper {
+  @apply absolute top-4 left-4 w-6 h-6
+}
+
+.loader {
+  @apply w-6 h-6 border-l border-gray-900 rounded-full animate-spin
+}

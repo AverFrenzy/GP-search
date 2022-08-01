@@ -1,38 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border
+}
+
 .App {
-  text-align: center;
+  @apply p-8 bg-gray-200 }
+
+.wrapper {
+  @apply p-4 bg-white rounded-2xl
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-section {
+  @apply flex gap-x-4
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-input-wrapper {
+  @apply relative w-full
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search-input {
+  @apply bg-gray-100 h-14 w-full pl-12 text-2xl rounded-2xl placeholder-black
 }
 
-.App-link {
-  color: #61dafb;
+.search-label {
+  @apply absolute top-0 left-0
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-btn {
+  @apply bg-black rounded-2xl text-white w-64 text-xl
 }
+
+.auto-complete {
+  @apply absolute top-16 max-h-60 overflow-auto bg-white shadow-md w-full rounded-2xl p-4 flex flex-col
+}
+.auto-complete-item {
+  @apply hover:bg-gray-500 p-3 rounded-2xl hover:text-lg transition-all duration-300 cursor-pointer
+}
+
